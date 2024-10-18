@@ -51,7 +51,7 @@
 /*
  *  ======== mainThread ========
  */
-void *mainThread(void *arg0)
+void* mainThread(void *arg0)
 {
     /* 1 second delay */
     uint32_t time = 1;
@@ -62,15 +62,20 @@ void *mainThread(void *arg0)
     // SPI_init();
     // Watchdog_init();
 
-    /* Configure the LED pin */
+    /* Configure the LED pins */
     GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+    GPIO_setConfig(CONFIG_GPIO_LED_1, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
 
     /* Turn on user LED */
     GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
+
+    /* Turn off user LED */
+    GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
 
     while (1)
     {
         sleep(time);
         GPIO_toggle(CONFIG_GPIO_LED_0);
+        GPIO_toggle(CONFIG_GPIO_LED_1);
     }
 }
