@@ -26,6 +26,12 @@ const Timestamp   = scripting.addModule("/ti/sysbios/runtime/Timestamp");
 /**
  * Write custom configuration values to the imported modules.
  */
+ble.addressMode                        = "ADDRMODE_RANDOM";
+ble.maxConnNum                         = 1;
+ble.randomAddress                      = "c0:cd:c4:c3:c2:c1";
+ble.maxPDUNum                          = 255;
+ble.L2CAPCOC                           = true;
+ble.deviceName                         = "Victor's HID Mouse";
 ble.radioConfig.codeExportConfig.$name = "ti_devices_radioconfig_code_export_param0";
 ble.connUpdateParamsPeripheral.$name   = "ti_ble5stack_general_ble_conn_update_params0";
 ble.advSet1.$name                      = "ti_ble5stack_broadcaster_advertisement_set0";
