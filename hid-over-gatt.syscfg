@@ -1,8 +1,9 @@
 /**
  * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
  * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
- * @cliArgs --board "/ti/boards/LP_CC2652R7" --rtos "tirtos7" --product "simplelink_cc13xx_cc26xx_sdk@7.41.00.17"
- * @versions {"tool":"1.18.1+3343"}
+ * @cliArgs --board "/ti/boards/LP_CC2652R7" --device "CC2652R7RGZ" --part "Default" --package "RGZ" --rtos "tirtos7" --product "simplelink_cc13xx_cc26xx_sdk@7.41.00.17"
+ * @v2CliArgs --device "CC2652R7" --package "VQFN (RGZ)" --board "/ti/boards/LP_CC2652R7" --rtos "tirtos7" --product "simplelink_cc13xx_cc26xx_sdk@7.41.00.17"
+ * @versions {"tool":"1.21.0+3721"}
  */
 
 /**

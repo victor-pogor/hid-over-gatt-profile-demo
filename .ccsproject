@@ -16,4 +16,5 @@
 	<templateProperties value="id=empty_LP_CC2652R7_tirtos7_gcc.projectspec.empty_LP_CC2652R7_tirtos7_gcc,buildProfile=release,isHybrid=true"/>
 	<origin value="C:\ti\simplelink_cc13xx_cc26xx_sdk_7_41_00_17\examples\rtos\LP_CC2652R7\drivers\empty\tirtos7\gcc\empty_LP_CC2652R7_tirtos7_gcc.projectspec"/>
 	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
 </projectOptions>
