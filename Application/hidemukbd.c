@@ -62,7 +62,7 @@
 #include "ll_common.h"
 
 #include <devinfoservice.h>
-#include "profiles/hid/hidkbdservice.h"
+#include "Profiles/hidkbdservice.h"
 #include "hiddev.h"
 
 #include "board_key.h"
@@ -876,10 +876,10 @@ static void HidEmuKbd_hidEventCB(uint8_t evt)
  */
 static uint8_t HidEmuKbd_enqueueMsg(uint8_t event, hid_input input)
 {
-    hidEmuKbdEvt_t *pMsg;
-
     // Create dynamic pointer to message.
-    if (pMsg = ICall_malloc(sizeof(hidEmuKbdEvt_t)))
+    hidEmuKbdEvt_t *pMsg = ICall_malloc(sizeof(hidEmuKbdEvt_t));
+
+    if (pMsg != NULL)
     {
         pMsg->event = event;
         pMsg->input = input;

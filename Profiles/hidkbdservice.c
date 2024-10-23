@@ -55,7 +55,7 @@
 #include "hidkbdservice.h"
 #include "battservice.h"
 
-#include "application/hiddev.h"
+#include "Application/hiddev.h"
 #include "ti_ble_config.h"
 
 /*********************************************************************

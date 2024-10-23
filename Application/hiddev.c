@@ -66,8 +66,8 @@
 #include <icall_ble_api.h>
 
 #include <devinfoservice.h>
-#include "profiles/hid/scanparamservice.h"
-#include "profiles/hid/battservice.h"
+#include "Profiles/scanparamservice.h"
+#include "Profiles/battservice.h"
 #include "hiddev.h"
 #include "ti_ble_config.h"
 
@@ -558,7 +558,7 @@ static void HidDev_init(void)
 
     // Initialize report ready clock timer
     Util_constructClock(&reportReadyClock, HidDev_reportReadyClockCB,
-                        HID_REPORT_READY_TIME, 0, false, NULL);
+                        HID_REPORT_READY_TIME, 0, false, (UArg)0);
 
     // Initialize Connection List
     HidDev_clearConnListEntry(LINKDB_CONNHANDLE_ALL);
@@ -2316,7 +2316,7 @@ static void HidDev_processParamUpdate(uint16_t connHandle)
     uint8_t connIndex;
 
     req.connectionHandle = connHandle;
-    req.connLatency = DEFAULT_DESIRED_SLAVE_LATENCY;
+    req.connLatency = DEFAULT_DESIRED_PERIPHERAL_LATENCY;
     req.connTimeout = DEFAULT_DESIRED_CONN_TIMEOUT;
     req.intervalMin = DEFAULT_DESIRED_MIN_CONN_INTERVAL;
     req.intervalMax = DEFAULT_DESIRED_MAX_CONN_INTERVAL;

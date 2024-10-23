@@ -58,7 +58,8 @@
 #include <icall.h>
 #include "hal_assert.h"
 #include "bcomdef.h"
-#include "simple_peripheral.h"
+#include "Application/hiddev.h"
+#include "Application/hidemukbd.h"
 #ifdef PTM_MODE
 #include "npi_task.h"
 #endif // PTM_MODE
@@ -152,7 +153,11 @@ int main()
   NPITask_createTask(ICALL_SERVICE_CLASS_BLE);
 #endif // PTM_MODE
 
-  SimplePeripheral_createTask();
+  /* Kick off HID service task - Priority 2 */
+  HidDev_createTask();
+
+  /* Kick off application - Priority 1 */
+  HidEmuKbd_createTask();
 
   /* enable interrupts and start SYS/BIOS */
   BIOS_start();
