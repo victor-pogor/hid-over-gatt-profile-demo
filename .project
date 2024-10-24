@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hid-over-gatt</name>
+	<name>simple_peripheral_LP_CC2652R7_tirtos7_ticlang</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -39,6 +39,26 @@
 			<name>Application/board_key.h</name>
 			<type>1</type>
 			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/common/cc26xx/board_key.h</locationURI>
+		</link>
+		<link>
+			<name>Application/rcosc_calibration.c</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/common/cc26xx/rcosc/rcosc_calibration.c</locationURI>
+		</link>
+		<link>
+			<name>Application/rcosc_calibration.h</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/common/cc26xx/rcosc/rcosc_calibration.h</locationURI>
+		</link>
+		<link>
+			<name>Application/two_btn_menu.c</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/common/cc26xx/menu/two_btn_menu.c</locationURI>
+		</link>
+		<link>
+			<name>Application/two_btn_menu.h</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/common/cc26xx/menu/two_btn_menu.h</locationURI>
 		</link>
 		<link>
 			<name>Include/gap.h</name>
@@ -111,6 +131,16 @@
 			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/inc/gatt_profile_uuid.h</locationURI>
 		</link>
 		<link>
+			<name>Profiles/simple_gatt_profile.c</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/profiles/simple_profile/cc26xx/simple_gatt_profile.c</locationURI>
+		</link>
+		<link>
+			<name>Profiles/simple_gatt_profile.h</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/profiles/simple_profile/simple_gatt_profile.h</locationURI>
+		</link>
+		<link>
 			<name>Startup/rom_init.c</name>
 			<type>1</type>
 			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/rom/agama_r1/rom_init.c</locationURI>
@@ -144,6 +174,11 @@
 			<name>iCall/icall_user_config.c</name>
 			<type>1</type>
 			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/icall/src/icall_user_config.c</locationURI>
+		</link>
+		<link>
+			<name>iCall/icall_user_config.h</name>
+			<type>1</type>
+			<locationURI>COM_TI_SIMPLELINK_CC13XX_CC26XX_SDK_INSTALL_DIR/source/ti/ble5stack/icall/src/inc/icall_user_config.h</locationURI>
 		</link>
 		<link>
 			<name>iCallBLE/ble_user_config.c</name>

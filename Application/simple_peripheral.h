@@ -1,16 +1,16 @@
 /******************************************************************************
 
- @file       hidemukbd.h
+ @file  simple_peripheral.h
 
- @brief This file contains the HID emulated keyboard sample application
+ @brief This file contains the Simple Peripheral sample application
         definitions and prototypes.
 
- Group: CMCU, SCS
- Target Device: cc13x2_26x2
+ Group: WCS, BTS
+ Target Device: cc13xx_cc26xx
 
  ******************************************************************************
  
- Copyright (c) 2011-2021, Texas Instruments Incorporated
+ Copyright (c) 2013-2024, Texas Instruments Incorporated
  All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
@@ -42,11 +42,11 @@
 
  ******************************************************************************
  
-
+ 
  *****************************************************************************/
 
-#ifndef HIDEMUKBD_H
-#define HIDEMUKBD_H
+#ifndef SIMPLEPERIPHERAL_H
+#define SIMPLEPERIPHERAL_H
 
 #ifdef __cplusplus
 extern "C"
@@ -56,6 +56,11 @@ extern "C"
 /*********************************************************************
  * INCLUDES
  */
+#include <menu/two_btn_menu.h>
+
+/*********************************************************************
+*  EXTERNAL VARIABLES
+*/
 
 /*********************************************************************
  * CONSTANTS
@@ -69,14 +74,22 @@ extern "C"
  * FUNCTIONS
  */
 
-/*********************************************************************
- * GLOBAL VARIABLES
+/*
+ * Task creation function for the Simple Peripheral.
  */
+extern void SimplePeripheral_createTask(void);
 
 /*
- * Task creation function for the HID emulated keyboard.
+ * Functions for menu action
  */
-extern void HidEmuKbd_createTask(void);
+/* Actions for Menu: Choose connection to work with */
+bool SimplePeripheral_doSelectConn(uint8 index);
+
+/* Action for Menu: AutoConnect */
+bool SimplePeripheral_doAutoConnect(uint8_t index);
+
+/* Actions for Menu: Set PHY - Select */
+bool SimplePeripheral_doSetConnPhy(uint8 index);
 
 /*********************************************************************
 *********************************************************************/
@@ -85,4 +98,4 @@ extern void HidEmuKbd_createTask(void);
 }
 #endif
 
-#endif /*HIDEMUKBD_H */
+#endif /* SIMPLEPERIPHERAL_H */
